@@ -23,20 +23,20 @@
 
 
 
-<div>
- <span>[![LinkedIn][linkedin-shield]][linkedin-url][![instagran][instagram-shield]][instagram-url][![twitter][twitter-shield]][twitter-url]</span>
+
+[![LinkedIn][linkedin-shield]][linkedin-url][![instagran][instagram-shield]][instagram-url][![twitter][twitter-shield]][twitter-url]
  
 [![Gmail][Gmail-shield]](mailto:siyarp97@gmail.com)
-</div>
+
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<img src="https://pbs.twimg.com/card_img/1849071995524440064/aziOWZ3V?format=jpg&name=medium" >
+<img src="https://pbs.twimg.com/card_img/1849071995524440064/aziOWZ3V?format=jpg&name=medium">
 <h3 align="center">Guess The Flag</h3>
  <p align="center">
     Hacking With Swift - 100 Days of SwiftUI Project 2
-
+ </p>
     <a href="https://www.hackingwithswift.com/100/swiftui/22"><strong>Go to HWS page -></strong></a>
 </div>
 
