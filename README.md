@@ -32,7 +32,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<img src="https://pbs.twimg.com/card_img/1849071995524440064/aziOWZ3V?format=jpg&name=medium">
+<img src="[https://pbs.twimg.com/card_img/1849071995524440064/aziOWZ3V?format=jpg&name=medium](https://pbs.twimg.com/card_img/1850696088207998976/Aubwso7E?format=jpg&name=medium)">
 <h3 align="center">Guess The Flag</h3>
  <p align="center">
     Hacking With Swift - 100 Days of SwiftUI Project 2
