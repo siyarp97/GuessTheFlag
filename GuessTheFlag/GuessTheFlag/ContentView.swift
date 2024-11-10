@@ -20,6 +20,9 @@ struct ContentView: View {
     @State private var gameEnd = false
     @State private var gameRound = 1
     
+    @State private var tappedIndex = 0
+    @State private var rotate = true
+    @State private var scale = 1.0
     var body: some View {
         ZStack{
             RadialGradient(stops: [
@@ -43,11 +46,22 @@ struct ContentView: View {
                     }
                     ForEach(0..<3){ number in
                         Button{
+                            rotate.toggle()
+                            tappedIndex = number
+                            scale = 0.75
                             tappedFlag(number)
                         }label: {
                             Image(countries[number])
                                 .clipShape(.capsule)
                                 .shadow(radius: 10)
+                                .rotation3DEffect(
+                                    .degrees(rotate ? 360 : 0),
+                                    axis: (x: 0.0, y: 1.0, z: 0.0)
+                                )
+                                .animation(countries[number] == countries[tappedIndex] ? .easeIn : nil, value: rotate)
+                                .opacity(countries[number] == countries[tappedIndex] ? 1 : 0.25)
+                                .scaleEffect(countries[number] == countries[tappedIndex] ? 1 : scale)
+                                .animation(.linear(duration: 0.5), value: rotate)
                         }
                     }
                 }
@@ -91,6 +105,7 @@ struct ContentView: View {
             scoreTitle = "False! That's the flag of \(countries[number])"
         }
         gameRound += 1
+        
         if gameRound == 9 {
             endOfTheGame()
         }else{
@@ -100,6 +115,7 @@ struct ContentView: View {
     func question(){
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        scale = 1.0
     }
     func endOfTheGame(){
         showingScore = false
@@ -111,6 +127,7 @@ struct ContentView: View {
         gameEnd = false
         question()
     }
+    
 }
 
 #Preview {
